@@ -14,4 +14,9 @@ import { ContactUsComponent } from './contact-us.component';
     ContactUsRoutingModule
   ]
 })
-export class ContactUsModule { }
+export class ContactUsModule {
+  constructor(){
+  console.log("contact loaded");
+
+  }
+ }

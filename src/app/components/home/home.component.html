@@ -1,12 +1,14 @@
 
   <!-- Forked from a template on Tutorialzine: https://tutorialzine.com/2016/06/freebie-landing-page-template-with-flexbox -->
-  <app-chat></app-chat>
+  <app-chat (latestMessage)="displayMessages($event)"></app-chat>
   <header>
     <h2><a href="#">Life is a party!</a></h2>
     <nav>
       <li><a [routerLink]="['/tour']" routerLinkActive="router-link-active" >Tours</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#" [routerLink]="['/contact-us']" routerLinkActive="router-link-active" >Contact</a></li>
+      <li><a >About</a></li>
+      <li><a  [routerLink]="['/contact-us']" routerLinkActive="router-link-active" >Contact</a></li>
+      <li><a [routerLink]="['/login']" routerLinkActive="router-link-active"  (click)="logout()">Logout</a></li>
+
     </nav>
   </header>
 
@@ -15,7 +17,7 @@
     <div class="hero-content-area">
       <h1>Life is a party!</h1>
       <h3>Unmissable Adventure Tours With Your Friends</h3>
-      <a href="#" class="btn">Contact Us Now</a>
+      <a [routerLink]="['/contact-us']" routerLinkActive="router-link-active"  class="btn">Contact Us Now</a>
     </div>
   </section>
 

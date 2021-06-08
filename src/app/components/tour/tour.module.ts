@@ -14,4 +14,9 @@ import { TourComponent } from './tour.component';
     TourRoutingModule
   ]
 })
-export class TourModule { }
+export class TourModule { 
+  constructor(){
+  console.log("tour loaded");
+  }
+  
+}

@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './components/home/page-not-found/page-not-found.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from './gaurds/auth.guard';
-
+import {PreloadAllModules} from '@angular/router'
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
@@ -15,7 +15,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,
+    {
+      preloadingStrategy:PreloadAllModules
+    })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

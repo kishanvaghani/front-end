@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -9,7 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ToastrModule } from 'ngx-toastr';
 import { ChatComponent } from './chat/chat.component';
-
 
 @NgModule({
   declarations: [
@@ -29,4 +27,7 @@ import { ChatComponent } from './chat/chat.component';
     }),
   ]
 })
-export class HomeModule { }
+export class HomeModule {
+  constructor(){console.log("home Loaded");
+  }
+ }

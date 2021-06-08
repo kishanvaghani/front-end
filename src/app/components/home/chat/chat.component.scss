@@ -6,6 +6,19 @@
     bottom: 0;
     z-index: 1;
 }
+//badge customization
+.badge-light {
+  background: #dc3545;
+  color: white;
+}
+.badge{
+  font-size: 40%;
+  position: absolute;
+  right: -2px;
+  padding: 0.25em 0.6em;
+  line-height: 2;
+  border-radius: 50%;
+}
 //typing indicater
 .typing {
    
@@ -472,7 +485,8 @@ body {
     background: #d2d6de;
     border: 1px solid #d2d6de;
     margin: 5px 0 0 50px;
-    color: #444
+    color: #444;
+    inline-size: fit-content;
 }
 
 .direct-chat-msg,
