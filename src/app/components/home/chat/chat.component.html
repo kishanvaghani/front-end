@@ -1,5 +1,5 @@
 <!-- chat symbol -->
-<div id="sy-whatshelp" *ngIf="chatStart">
+<div id="sy-whatshelp" *ngIf="chatStart" >
 
     <a class="sywh-open-services" data-placement="left" (click)="chat()">
         <span class="badge badge-light" *ngIf="message > 0">{{message}}+</span>
@@ -9,7 +9,7 @@
 </div>
 
 <!-- Chat system -->
-<div *ngIf="!chatStart">
+<div *ngIf="!chatStart" >
     <div class="col-md-4 chat">
         <div class="box box-warning direct-chat direct-chat-warning">
             <div class="box-header with-border">
@@ -29,18 +29,18 @@
             </div>
             <div class="box-body">
                 <div class="direct-chat-messages" #scrollMe>
-                    <div class="direct-chat-msg" *ngFor="let message of conversations"
+                    <div class="direct-chat-msg"   *ngFor="let message of conversations"
                         [ngClass]="{'right text-right': message?.u_id==userData?.id}">
                         <!-- <div class="latest">
                             New Messages
                         </div> -->
-                        <div class="direct-chat-info clearfix"> <span
+                        <div class="direct-chat-info clearfix" > <span
                                 class="direct-chat-name pull-left mr-2">{{message?.name}}</span>
                             <span class="direct-chat-timestamp pull-right">{{message?.time | date:"short"}}</span>
                         </div>
-                        <img class="direct-chat-img" src="https://img.icons8.com/color/36/000000/administrator-male.png"
+                        <img class="direct-chat-img"  src="https://img.icons8.com/color/36/000000/administrator-male.png"
                             alt="message user image">
-                        <div class="direct-chat-text" [ngClass]="{'ml-auto text-left': message?.u_id==userData?.id}">
+                        <div class="direct-chat-text" appHoldable (holdTime)="deleteChatMessage($event,message?.id, message?.u_id)" [ngClass]="{'ml-auto text-left': message?.u_id==userData?.id}">
                             {{message?.message}} </div>
                     </div>
                     <!-- <div class="direct-chat-msg right">

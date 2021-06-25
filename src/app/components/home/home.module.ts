@@ -8,12 +8,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ToastrModule } from 'ngx-toastr';
 import { ChatComponent } from './chat/chat.component';
-
+import { DirectivesModule } from 'src/app/directives/directives.module';
 @NgModule({
   declarations: [
     HomeComponent,
     PageNotFoundComponent,
-    ChatComponent
+    ChatComponent,
   ],
   imports: [
     CommonModule,
@@ -21,6 +21,7 @@ import { ChatComponent } from './chat/chat.component';
     ReactiveFormsModule,
     NgxSpinnerModule,
     HttpClientModule,
+    DirectivesModule,
     ToastrModule.forRoot({
       maxOpened:1,
       autoDismiss:true
